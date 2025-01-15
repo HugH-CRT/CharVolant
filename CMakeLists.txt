@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(CharVolant LANGUAGES CXX)
+project(CharVolant)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_subdirectory(Source)
 
-add_executable(CharVolant
-  main.cpp
-)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT CharVolant)
